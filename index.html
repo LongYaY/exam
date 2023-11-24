@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    h2 {
+      text-align: center;
+      margin: 100px 0 20px 0;
+    }
+    #box{
+      width: 600px;
+      border: 1px solid black;
+      padding: 15px;
+      margin: auto;
+      border-radius: 7px;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        border-collapse: collapse;
+    }
+    tr,th,td{
+        text-align: center;
+        height: 50px;
+    }
+  </style>
+  <body> <h2>11月24日考试题</h2>
+    <div id="box">
+      <table border="1px">
+        <thead>
+            <tr>
+                <th>考试题</th>
+                <th>链接</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+      </table>
+      <!-- <a href="./swiper.html"></a> -->
+      </div>
+    </div>
+    <script>
+        let arr=[{
+            name:'折线图',
+            link:'./echarts1.html'
+        },
+        {
+            name:'地图',
+            link:'./echarts2.html'
+        },
+        {
+            name:'导航',
+            link:'./map.html'
+        },
+        {
+            name:'折线图',
+            link:'./swiper.html'
+        }
+    ]
+     $(function(){
+        runder()
+     })
+     function runder(){
+        let html=''
+        arr.forEach((item)=>{
+            html+=` <tr>
+                      <td>${item.name}</td>
+                      <td><a href="${item.link}" target="_blank">${item.link}</a></td>
+                    </tr>`
+        })
+        $('tbody').html(html)
+     }
+    </script>
+  </body>
+</html>
